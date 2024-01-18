@@ -2,9 +2,10 @@ import React from "react";
 import home from "../../images/home-icn.svg";
 import report from "../../images/report-icn.svg";
 import general from "../../images/group.svg";
+import "./Footer.css";
 export default function Footer() {
   return (
-    <div>
+    <div className="app">
       <div className="footer">
         <footer className="footerView">
           <div className="home">

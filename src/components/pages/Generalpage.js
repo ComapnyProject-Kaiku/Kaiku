@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "../modules/Navbar";
-import Map from "../modules/Map";
 import Footer from "../modules/Footer";
-function Homepage() {
+import Generalobservation from "../modules/Generalobservation";
+function Generalpage() {
   return (
     <div className="app">
-      <Map />
+      <Generalobservation />
     </div>
   );
 }
 
-export default Homepage;
+export default Generalpage;
