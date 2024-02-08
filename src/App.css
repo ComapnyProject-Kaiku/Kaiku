@@ -12,6 +12,13 @@
   
 }
 
+.projectobs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 .navContainer{
   height: auto;
@@ -35,6 +42,7 @@
   font-weight: 600;
   line-height: normal;
   text-align: center;
+  margin-top: 5px;
 
 }
 
@@ -93,7 +101,7 @@
   align-items: center;
   color: #1C1E21;
   text-align: center;
-  font-family: Inter;
+  font-family: Roboto;
   font-size: 17px;
   font-style: normal;
   font-weight: 600;
@@ -333,22 +341,17 @@
   border: none;
   cursor: pointer;
 }
-
-.Input-arrow-container {
-  position: absolute;
-  right: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-top: -2px;
+.point-btn {
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  
 }
 
-.Input-arrow {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(45deg);
-  -webkit-transform: (45deg);
+.continious-btn {
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
 }
 
 

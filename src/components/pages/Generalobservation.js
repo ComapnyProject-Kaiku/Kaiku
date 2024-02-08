@@ -155,6 +155,7 @@ function Generalobservation() {
                     </div>
                 </nav>
             </div>
+            <Footer />
 
           <div className="rest" data-uploading={isUploading ? 'true' : 'false'} >
            <UploadPhoto imgState={imgUrl} imgSetState={setImgUrl} imageFile={imageFiles} setImageFile={setImageFiles} />
@@ -169,20 +170,18 @@ function Generalobservation() {
            <Description setDescription={setDes} desi={dec} />
 
            <Post onSubmit={addData}/>
-
-
-            <Footer />
+            
           </div>  
 
-          <div className="uploading" data-uploading={isUploading ? 'true' : 'false'} >
-            {/* <h1>Uploading...</h1> */}
-            <RingLoader
-              color="blue"
-              loading={isUploading}
-              size={150}
-              aria-label="Loading Spinner"
-            />
-          </div>
+            <div className="uploading" data-uploading={isUploading ? 'true' : 'false'} >
+              {/* <h1>Uploading...</h1> */}
+              <RingLoader
+                color="blue"
+                loading={isUploading}
+                size={150}
+                aria-label="Loading Spinner"
+              />
+            </div>
 
           <div className="success-parent" data-success={isShowMessage ? 'true' : 'false'}>
 

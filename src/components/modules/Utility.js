@@ -23,7 +23,7 @@ function Utility({setLatitude, setLongitude, lati, longi,setAddress,addr }){
       }
       useEffect(()=>{
         getgps()
-      },[]);
+      },);
 
     return(
         <>
