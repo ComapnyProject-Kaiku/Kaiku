@@ -1,5 +1,6 @@
 import React from "react";
 import vector from "../images/vector.svg";
+import { UserIc } from "../Public/Asset/Icons/CostumIcon";
 
 export default function Navbar() {
   return (
@@ -7,6 +8,9 @@ export default function Navbar() {
       <div className="navContainer">
         <nav className="navbar">
           <div className="logo">
+            <div className="user-pic">
+              <UserIc />
+            </div>
           </div>
           <div>YLEISHAVAINNOT</div>
           <div className="threedot">

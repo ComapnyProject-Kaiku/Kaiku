@@ -340,6 +340,7 @@ padding-left: 4%;
   }
 
   .description {
+    width: auto;
     height: 150px;
     padding: 0px 20px 0px 20px;
     border-radius: 10px;
@@ -360,4 +361,18 @@ padding-left: 4%;
     resize: none;
     width: 100%;
   }
+}
+.css-b62m3t-container {
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+.warning{
+  background-color: red;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
 }
