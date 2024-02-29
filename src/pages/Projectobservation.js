@@ -1,14 +1,76 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Footer from "../component/Footer";
 import { UserIc } from "../Public/Asset/Icons/CostumIcon";
-import  Button  from "@mui/material/Button";
 import vector from "../images/vector.svg"
+import { ToggleButton } from "@mui/material";
+import { collection, addDoc } from "@firebase/firestore";
+import { db } from "../component/FirebaseConfig";
 
-function Projectobservation() {
+
+export default function Projectobservation() {
+
+const [selected, setSelected] = React.useState(false);
+
+
+let [latitude, setlatitude] = useState(null);
+let [longitude, setlongitude] = useState(null);
+let [startlatitude, setstartlatitude] = useState(0);
+let [startlongitude, setstartlongitude] = useState(0);
+const currDate = new Date().toLocaleDateString();
+const currTime = new Date().toLocaleTimeString();
+
+
+function getstartlocation() {
+    navigator.geolocation.getCurrentPosition((post) => {
+        setlatitude((p) => post.coords.latitude);
+        setlongitude((p) => post.coords.longitude);
+  
+        setstartlatitude(post.coords.latitude);
+        setstartlongitude(post.coords.longitude);
+        
+      });
+}
+
+
+const tyypit = [
+    { label: 'Liikennermerkki vinossa' },
+    { label: 'Maakivi' },]
+
+const firebaseData = async() => {
+
+    try {
+    let docRef = await addDoc(collection(db, "data"),{
+    desc: 'Pistehavainto',
+    type: tyypit,
+    date: currDate,
+    time: currTime,
+    startlat: startlatitude,
+    startlong: startlongitude,
+    
+    })
+
+    }catch(e){
+    console.log(`error adding data to firestore: ${e} `)
+}
+
+}
+
+useEffect(() => {
+    getstartlocation()
+  },[]);
+
+if(selected){ 
+console.log('Päällä')
+firebaseData()
+getstartlocation()
+
+}else{
+
+    console.log('Pois')
+}
 
     return (
         <div className="projectobs">
-            
 
             <div className="navContainer">
                 <nav className="navbar">
@@ -23,33 +85,22 @@ function Projectobservation() {
                     </div>
                 </nav>
             </div>
-            
+
             <Footer/>
 
             <div className="point-btn">
-                <Button variant="contained" size="large" onClick={()=>{
-                    alert("clicked")
-                }}>terve</Button>
+            <ToggleButton
+            
+            value={'check'}
+            selected={selected}
+            onChange={() => {
+            setSelected(!selected);
+            }}
+            >PisteHavainto
+            </ToggleButton>
 
             </div>
-
-            <div className="continious-btn">
-
-                <Button variant="contained" size="large"> moro </Button>
-                
-            
-            </div>    
-
-            
-
-
-
-
-
-
         </div>
     );
 
 }
-
-export default Projectobservation;
