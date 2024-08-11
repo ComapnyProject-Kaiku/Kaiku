@@ -1,6 +1,6 @@
 # Kaiku - Road Sighting PWA
 
-![Kaiku Logo](./public/tentrioIC512_rounded.png)
+![Kaiku Logo](./Frontend\public\tentrioIC512_maskable.png)
 
 [Live Demo](https://kaiku-beta.vercel.app/)
 
