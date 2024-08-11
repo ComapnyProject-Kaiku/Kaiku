@@ -1,0 +1,433 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 70px 0px 0px 0px;
+}
+
+/* navbar */
+.navContainer {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  background-color: #eaeaea;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: #414756;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.navItem-right {
+  position: relative;
+  display: inline-block;
+  padding-right: 3%;
+}
+
+/* offline-conter-badge */
+.counter-badge {
+  color: #414756;
+  border: #1fe700 solid 3px;
+  background: #1fe700;
+  padding: 1px 6px;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: 600;
+  position: absolute;
+  top: -12px;
+}
+
+/* Home-Screen */
+/* Map */
+.mapBox {
+  margin-top: 77px;
+  position: fixed;
+}
+
+.khali {
+  overflow: hidden;
+}
+
+/* General-Observation-page */
+/* rest-container-general-obs */
+.rest[data-uploading="true"] {
+  opacity: 0.2;
+}
+
+.rest {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 10px;
+  width: 92%;
+}
+
+/* photo-upload-box */
+.Photo-box-outline,
+.cam-gps-access,
+.gps-access,
+.map-box,
+.drop-d,
+.description,
+.input-field-container,
+.Report-box {
+  margin: 0px 0px 30px 0px;
+}
+
+.Photo-box-outline {
+  border-radius: 10px;
+  border: 1px solid #d2d3d5;
+  background: rgba(255, 255, 255, 0);
+  padding: 2px 2px 2px 2px;
+}
+
+.Photo-box-inner {
+  border-radius: 10px;
+  height: 170px;
+  background: #eaebed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.eclipse {
+  width: 50px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #d9dadf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-t {
+  padding-left: 7%;
+}
+
+.photos-grid {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center; /* Align items to the start of the container */
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.photos-grid > li > img {
+  display: flex;
+  flex: 0 0 auto; /* This means the images won't grow or shrink and will keep their original size */
+  height: 52px;
+  width: 50px;
+  background-color: antiquewhite;
+  margin-right: 5px; /* Add some space between the images */
+  margin: 5px;
+}
+
+.displayImage-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.file-choose-btn {
+  display: none;
+}
+
+/* GPS-Box */
+.cam-gps-access {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #d1d2d5;
+  background: #fff;
+  padding: 0px 20px 0px 20px;
+}
+.cam-gps-access > h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.road-address {
+  height: 37px;
+  width: 190px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d1d2d5;
+}
+
+.location-p {
+  font-size: 15px;
+  font-weight: 700;
+  color: #464646;
+}
+
+.icons-list {
+  list-style: none;
+}
+
+/* Description-box */
+
+#description-ctn {
+  height: 128px !important;
+}
+
+.input-field-container > textarea {
+  font-weight: 600;
+  line-height: normal;
+  font-size: 15px;
+  resize: none;
+  height: 120px;
+}
+
+/* Submit-button */
+.Report-box {
+  display: flex;
+  justify-content: center;
+  height: 45px;
+  padding: 0px 20px 0px 20px;
+  border-radius: 10px;
+  border: 1px solid #d2d3d5;
+  margin: 0px 0px 100px 0px;
+}
+
+.Report-btn {
+  font-size: 16px;
+  font-weight: 600;
+  background: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+::placeholder {
+  /* color: hsl(0, 0%, 20%);
+  font-weight: 600;
+  font-size: 20px;
+  opacity: 1; */
+  cursor: default;
+  box-sizing: border-box;
+  font-size: 19px;
+  font-weight: bold;
+  color: hsl(0, 0%, 50%);
+}
+
+/* E-18Murrla-form imput field and description component */
+
+/* typeSelector css for overflow hide */
+.css-b62m3t-container {
+  position: relative !important;
+}
+
+.css-1f43avz-a11yText-A11yText,
+.css-1f43avz-a11yText-A11yText {
+  position: unset !important;
+}
+
+.input-field-container {
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 38px;
+  outline: 0 !important;
+  -webkit-transition: all 100ms;
+  transition: all 100ms;
+  background-color: hsl(0, 0%, 100%);
+  border-color: hsl(0, 0%, 80%);
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  height: 65px;
+  font-size: 19px;
+  padding: 0 20px;
+  font-weight: bold;
+}
+
+.input-field {
+  color: inherit;
+  background: 0px center;
+  opacity: 1;
+  width: 100%;
+  grid-area: 1 / 2;
+  font: inherit;
+  min-width: 2px;
+  border: 0px;
+  margin: 0px;
+  outline: 0px;
+  padding: 0px;
+  visibility: visible;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: inline-grid;
+  grid-area: 1 / 1 / 2 / 3;
+  grid-template-columns: 0 min-content;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  color: hsl(0, 0%, 20%);
+  box-sizing: border-box;
+}
+
+/* .projectobs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 20%;
+} */
+
+/* .footer {
+  margin-top: 34px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: auto;
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 10px;
+} */
+
+/* .footerView {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding-left: 7%;
+} */
+
+/* .footerView figcaption {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #1c1e21;
+  text-align: center;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+} */
+
+/* .gps-access {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #d1d2d5;
+  background: #fff;
+  padding: 0px 20px 0px 20px;
+}
+.gps-access > h3 {
+  font-size: 14px;
+  font-weight: 700;
+} */
+
+/* .map-box {
+  width: 388px;
+  height: 300px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #d2d3d5;
+  background: rgba(255, 255, 255, 0);
+  padding: 0px 0px 0px 0px;
+} */
+
+/* BottomNav-bar */
+/* .general {
+  padding-left: 8%;
+  cursor: pointer;
+}
+
+.home {
+  cursor: pointer;
+}
+
+.project_observation {
+  cursor: pointer;
+} */
+
+/* .loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+} */
+
+/* .success-parent[data-success="true"] {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.success-parent[data-success="true"] .success-message {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 10px;
+  right: 10px;
+ 
+
+  width: 15%;
+  height: 50px;
+  background-color: green;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.success-parent[data-success="false"] {
+  display: none;
+}
+
+.uploading[data-uploading="true"] {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.uploading[data-uploading="false"] {
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
